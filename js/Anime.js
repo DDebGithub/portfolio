@@ -55,8 +55,8 @@ function openModal(comicId) {
         comicTitle.textContent = "Fate/Stay Night";
         comicReview.innerHTML = "After a mysterious inferno kills his family, <i>Shirou</i> is saved and adopted by Kiritsugu Emiya, who teaches him the ways of magic and justice. One night, years after Kiritsugu's death, Shirou is cleaning at school, when he finds himself caught in the middle of a deadly encounter between two superhumans known as Servants. <br>During his attempt to escape, the boy is caught by one of the Servants and receives a life-threatening injury. Miraculously, he survives, but the same Servant returns to finish what he started. In desperation, Shirou summons a Servant of his own, a knight named <i>Saber</i>. <br>The two must now participate in the Fifth Holy Grail War, a battle royale of seven Servants and the mages who summoned them, with the grand prize being none other than the omnipotent Holy Grail itself. <br>Fate/stay night follows Shirou as he struggles to find the fine line between a hero and a killer, his ideals clashing with the harsh reality around him. Will the boy become a hero like his foster father, or die trying";
       }   
-  else(){
-  comicTitle.textContent = "No Data";
+  elseif(){
+        comicTitle.textContent = "No Data";
         comicReview.innerHTML = "Need to add content";
   }
   
