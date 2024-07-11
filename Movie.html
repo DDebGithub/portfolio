@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Showcase - Home</title>
+  <link rel="stylesheet" href="css/Comic.css">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+   <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#home">Home</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#reviews">Reviews</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link js-scroll" href="#suggest">Suggestions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+  
+  <!--/ Intro Skew Star /-->
+  <div id="home" class="intro route bg-image" style="background-image: url(img/Movie-title.png)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+           <h1 class="intro-title mb-4" style="margin-left: 5rem;">Welcome to my Movie Collection</h1> 
+          <!--<p class="intro-subtitle"><span class="text-slider-items">Sprinklr Specialist, Computer Science Professional, Technical Support Specialist, Android Developer, Social Media Analytics Expert, Troubleshooting Expert, Helpdesk Agent, Web Developer, Computer Systems Monitor, Khoros Analyst, Comic Book Enthusiast, Gardener, Cook, Gaming Enthusiast, Artist/Painter/Sketcher/Drawer, Tech Savvy Professional, Motorcyclist/Automobile Enthusiast</span><strong class="text-slider"></strong></p>
+              <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+  
+    <!-- Featured Movie Section
+    <section>
+  <div class="anime-description">
+      Welcome to my personal webpage showcasing my diverse collection of Movies and novels! Discover new titles and dive into various genres, making it easier for you to explore and find your next literary adventure. This curated list allows you to relate to my reading experiences, uncovering hidden gems and timeless classics along the way. Happy reading!
+    </div>
+  </section>
+  
+    Filter Section -->
+     <div class="filter-section">
+      <label for="rating-filter">Filter by Rating:</label>
+      <select id="rating-filter">
+        <option value="all">All</option>
+        <option value="1">1 Star</option>
+        <option value="2">2 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="5">5 Stars</option>
+      </select>
+    </div>
+  
+   <!-- Comic Reviews Section -->
+  <section id="reviews">
+  <div class="comic-reviews-container">
+    
+    <div class="comic-card" data-rating="5">
+      <img src="img/movie/Prisoners.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Prisoners</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="5">
+      <img src="img/movie/Silence.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Silence</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="5">
+      <img src="img/movie/Revenant.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">The Revenant</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="4">
+      <img src="img/movie/Social.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">The Social Network</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="5">
+      <img src="img/movie/Pulp.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Pulp Fiction</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="3">
+      <img src="img/movie/Birdman.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Birdman</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="4">
+      <img src="img/movie/InsideLD.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Inside Llewyn Davis</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="5">
+      <img src="img/movie/Fall.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">The Fall</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="5">
+      <img src="img/movie/Sev7n.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Se7en</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    
+    
+    <!-- Add more comic cards here -->
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" style="display: none;">
+    <div id="modal-content">
+      <h2 id="comic-title-modal"></h2>
+      <div id="comic-review-modal"></div>
+      <button id="close-modal-button" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  </section>
+
+  <section id="about">
+    <!-- Your About Me content goes here -->
+  </section>
+
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="suggest" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Suggest Your Movies
+                    </h5>
+                  </div>
+                  <div>
+                      <form action="" method="post" role="form" class="contactForm">
+                      <div id="sendmessage">Your suggestion has been received. Thank you!</div>
+                      <div id="errormessage"></div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="That can't possibly be your name" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Movie Name" data-rule="minlen:4" data-msg="Seriously, A movie without a name??" />
+                              <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="You must have liked something about the movie, Right??" placeholder="What about the movie did you like?"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Get in Touch
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      I'd love to hear your movie suggestions! Got a favorite film or a hidden gem you think I should check out? Drop your recommendations on the left and help me discover some new cinematic adventures. Can't wait to see what you come up with!</p>
+                     <!-- <ul class="list-ico">
+                      <li><span class="ion-ios-location"></span> 8a Cross, Tungabhadra Rd, Manjunatha Layout, Thubarahalli, Munnekollal, Bengaluru, Karnataka 560037</li>
+                      <li><span class="ion-ios-telephone"></span> (+91) 8257896457 / (+91) 6003429091</li>
+                      <li><span class="ion-email"></span> ddeb666@gmail.com</li>
+                    </ul> /-->
+                  </div>
+                  <!-- <div class="socials">
+                    <ul>
+                      <li><a href="https://www.facebook.com/debojoytideb.deb.3"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                      <li><a href="https://www.linkedin.com/in/debajyoti-deb-336811161/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                      <li><a href="https://twitter.com/DebajyotiDeb18"><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
+                      <li><a href="https://steamcommunity.com/profiles/76561199069308811/"><span class="ico-circle"><i class="ion-steam"></i></span></a></li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+   <script src="js/Book.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  
+   
+</body>
+</html>

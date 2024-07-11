@@ -1,0 +1,453 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Featured Comic Styles */
+    .featured-comic-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .featured-comic-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border: 2px solid #333;
+    }
+
+    .comic-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .comic-description {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media screen and (max-width: 600px) {
+      .comic-title {
+        font-size: 20px;
+      }
+
+      .comic-description {
+        font-size: 16px;
+      }
+    }
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 15px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease;
+}
+
+.menu li a:hover {
+  background-color: #555;
+}
+
+/* Responsive media query */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Completed Comics Styles */
+    .completed-comics-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .comic-thumbnail {
+      width: 200px;
+      height: 300px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .comic-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .comic-thumbnail img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Completed Comics Styles */
+    .completed-comics-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .comic-thumbnail {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .comic-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .comic-thumbnail img:hover {
+      transform: scale(1.05);
+    }
+
+    .completed-label {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    
+    /* Comic Reviews Styles */
+    .comic-reviews-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .comic-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .comic-card img {
+      width: 100%;
+      height: 464px;
+      object-fit: cover;
+    }
+
+    .comic-card-content {
+      padding: 10px;
+    }
+
+    .comic-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .comic-review {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .read-more-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    /* Modal Styles */
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    #modal-content {
+      background-color: #fff;
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #comic-title-modal {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #comic-review-modal {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    #close-modal-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    
+
+    /* Footer Section Styles */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    
+  
+
+   
+ /* Step 5: Comic Thumbnails */
+    .comic-item {
+      width: 250px;
+      margin: 10px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .comic-cover {
+      width: 100%;
+      height: 300px; /* Adjust the height as needed */
+      object-fit: cover;
+    }
+
+    .comic-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    /* Rating Stars */
+    .stars {
+      display: inline-block;
+      font-size: 0; /* Hide the default text content of the stars */
+      margin-left: -124px;
+    }
+
+    .star {
+      font-size: 24px;
+      color: #ddd; /* Set the color for empty stars */
+    }
+
+    .star.active {
+      color: #f57242; /* Set the color for filled stars */
+    }
+    
+    /* Carousel */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  animation: slide 50s linear infinite;
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  
+  20%, 80% {
+    transform: translateX(-100%);
+  }
+  
+  40%, 60% {
+    transform: translateX(-200%);
+  }
+}
+
+/* Add CSS styles to the filter section */
+
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align to the right side */
+  margin-bottom: 20px;
+  
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+}
+
+/* Style for the circular button with a plus sign */
+
+.add-section-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007BFF; /* Change the background color as desired */
+    color: #fff; /* Text color */
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/*--------------------------------------------------------------
+# Events Section
+--------------------------------------------------------------*/
+.events .container-fluid {
+  padding: 0;
+}
+
+.events .event-item {
+  background-size: cover;
+  background-position: cente;
+  min-height: 600px;
+  padding: 30px;
+}
+
+@media (max-width: 575px) {
+  .events .event-item {
+    min-height: 500px;
+  }
+}
+
+.events .event-item:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+}
+
+.events .event-item h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+  position: relative;
+}
+
+.events .event-item .price {
+  color: #fff;
+  border-bottom: 2px solid var(--color-primary);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.events .event-item .description {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .events .swiper-slide-active+.swiper-slide {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+}
+
+.events .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.events .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #d1d1d7;
+  opacity: 1;
+}
+
+.events .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+}

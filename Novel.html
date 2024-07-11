@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Showcase - Home</title>
+  <link rel="stylesheet" href="css/Comic.css">
+</head>
+<body>
+    <!-- Menubar -->
+  <header>
+    <nav>
+      <div class="container">
+        <h1>Book Showcase</h1>
+        <ul class="menu">
+          <li><a href="#featured">Featured Books</a></li>
+          <li><a href="#reviews">Book Reviews</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+    <!-- Carousel
+    <div class="carousel-container">
+    <div class="carousel">
+      <img src="img/Batman_TLH.heic" alt="">
+    
+        <img src="img/Batman_TKJ.heic" alt="">
+    
+        <img src="img/Robin_Y1.heic" alt="">
+        <img src="img/Robin_Y1.heic" alt="">
+        <img src="img/Robin_Y1.heic" alt="">
+        <img src="img/Robin_Y1.heic" alt="">
+        <img src="img/Robin_Y1.heic" alt="">
+        
+    </div>
+    </div> -->
+  
+    <!-- Featured Book Section -->
+    <section>
+  <div class="anime-description">
+      Welcome to my personal webpage showcasing my diverse collection of books and novels! Discover new titles and dive into various genres, making it easier for you to explore and find your next literary adventure. This curated list allows you to relate to my reading experiences, uncovering hidden gems and timeless classics along the way. Happy reading!
+    </div>
+  </section>
+  
+    <!-- Filter Section -->
+     <div class="filter-section">
+      <label for="rating-filter">Filter by Rating:</label>
+      <select id="rating-filter">
+        <option value="all">All</option>
+        <option value="1">1 Star</option>
+        <option value="2">2 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="5">5 Stars</option>
+      </select>
+    </div>
+  
+   <!-- Comic Reviews Section -->
+  <section id="reviews">
+  <div class="comic-reviews-container">
+    
+    <div class="comic-card" data-rating="3">
+      <img src="img/book/Astro.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Astronomy: The Definitive Guide to the Universe</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    <div class="comic-card" data-rating="5">
+      <img src="img/book/Animal.heic" alt="">
+      <div class="comic-card-content">
+        <div class="comic-title">Animal Farm</div>
+        <div class="comic-rating">
+          <div class="stars">
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+            <span class="star active">&#9733;</span>
+          </div>
+        </div>
+        <div class="comic-review">
+          I found this comic to be quite disappointing. The plot was confusing, and the characters lacked depth.
+        </div>
+        <button class="read-more-button" onclick="openModal('comic2')">Read More</button>
+      </div>
+    </div>
+    
+    <!-- Add more comic cards here -->
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" style="display: none;">
+    <div id="modal-content">
+      <h2 id="comic-title-modal"></h2>
+      <div id="comic-review-modal"></div>
+      <button id="close-modal-button" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  </section>
+
+  <section id="about">
+    <!-- Your About Me content goes here -->
+  </section>
+
+  <section id="contact">
+    <!-- Your contact form or contact information goes here -->
+  </section>
+  
+  <!-- Step 8: Footer Section -->
+  <footer>
+    <p>© 2023 Debajyoti Deb. All rights reserved. | <a href="#top">Back to top</a></p>
+  </footer>
+
+   <script src="js/Book.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+   
+</body>
+</html>
