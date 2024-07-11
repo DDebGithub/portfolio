@@ -31,9 +31,9 @@ function openModal(comicId) {
         comicTitle.textContent = "Bleach";
         comicReview.innerHTML = "<i>Ichigo Kurosaki</i> is an ordinary high schooler—until his family is attacked by a <i>Hollow</i>, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named <i>Rukia Kuchiki</i>, who gets injured while protecting Ichigo's family from the assailant. <br> To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result. However, as Rukia is unable to regain her powers, Ichigo is given the daunting task of hunting down the Hollows that plague their town. However, he is not alone in his fight, as he is later joined by his friends—classmates <i>Orihime Inoue</i>, <i>Yasutora Sado</i>, and <i>Uryuu Ishida</i> — who each have their own unique abilities. <br>As Ichigo and his comrades get used to their new duties and support each other on and off the battlefield, the young Soul Reaper soon learns that the Hollows are not the only real threat to the human world.";
       }
-      else if (comicId === "comic3") {
-        comicTitle.textContent = "Comic 3";
-        comicReview.textContent = "This is from the JS number 3";
+      else if (comicId === "dbz") {
+        comicTitle.textContent = "DragonballZ";
+        comicReview.innerHTML = "Five years after winning the World Martial Arts tournament, <i>SON-Goku</i> is now living a peaceful life with his wife and son. This changes, however, with the arrival of a mysterious enemy named <i>Raditz</i> who presents himself as Goku's long-lost brother. He reveals that Goku is a warrior from the once powerful but now virtually extinct Saiyan race, whose homeworld was completely annihilated.<br> When he was sent to Earth as a baby, Goku's sole purpose was to conquer and destroy the planet; but after suffering amnesia from a head injury, his violent and savage nature changed, and instead was raised as a kind and well-mannered boy, now fighting to protect others. <br>With his failed attempt at forcibly recruiting Goku as an ally, Raditz warns Goku's friends of a new threat that's rapidly approaching Earth—one that could plunge Earth into an intergalactic conflict and cause the heavens themselves to shake. A war will be fought over the seven mystical dragon balls, and only the strongest will survive in Dragon Ball Z. ";
       }
       
 
