@@ -59,11 +59,14 @@ function openModal(comicId) {
         comicTitle.textContent = "XXXHolic";
         comicReview.innerHTML = "<i>Kimihiro Watanuki</i> can see spirits and other assorted supernatural creatures, which is quite a bothersome ability he strongly dislikes. On the way home one day, while plagued by some spirits, he is inexplicably compelled to enter a strange house. There, he encounters <i>Yuuko</i>, a mysterious woman who claims to be able to rid him of the ability to see and attract the troublesome creatures—for a price. She demands that he work at her <i>store</i> that grants wishes to people, and thus begins Watanuki's adventures through weird and wonderful events.";
       }
-  
-  }
-  
+  else if (comicId === "comic3") {
+        comicTitle.textContent = "Comic 3";
+        comicReview.textContent = "This is from the JS number 3";
+      }
+      
+
   modal.style.display = "block";
-    }
+}
 
 function closeModal() {
       var modal = document.getElementById("modal");
