@@ -54,7 +54,11 @@ function openModal(comicId) {
    else if (comicId === "fatestaynight") {
         comicTitle.textContent = "Fate/Stay Night";
         comicReview.innerHTML = "After a mysterious inferno kills his family, <i>Shirou</i> is saved and adopted by Kiritsugu Emiya, who teaches him the ways of magic and justice. One night, years after Kiritsugu's death, Shirou is cleaning at school, when he finds himself caught in the middle of a deadly encounter between two superhumans known as Servants. <br>During his attempt to escape, the boy is caught by one of the Servants and receives a life-threatening injury. Miraculously, he survives, but the same Servant returns to finish what he started. In desperation, Shirou summons a Servant of his own, a knight named <i>Saber</i>. <br>The two must now participate in the Fifth Holy Grail War, a battle royale of seven Servants and the mages who summoned them, with the grand prize being none other than the omnipotent Holy Grail itself. <br>Fate/stay night follows Shirou as he struggles to find the fine line between a hero and a killer, his ideals clashing with the harsh reality around him. Will the boy become a hero like his foster father, or die trying";
-      }   
+      }
+  else if (comicId === "xxxholic") {
+        comicTitle.textContent = "XXXHolic";
+        comicReview.innerHTML = "<i>Kimihiro Watanuki</i> can see spirits and other assorted supernatural creatures, which is quite a bothersome ability he strongly dislikes. On the way home one day, while plagued by some spirits, he is inexplicably compelled to enter a strange house. There, he encounters <i>Yuuko</i>, a mysterious woman who claims to be able to rid him of the ability to see and attract the troublesome creatures—for a price. She demands that he work at her <i>store</i> that grants wishes to people, and thus begins Watanuki's adventures through weird and wonderful events.";
+      }
   
   }
   
