@@ -1039,7 +1039,7 @@
 function startTicker() {
   var tickerElement = document.getElementById("timer");
   var startDate = new Date("March 15, 2022 00:00:00");
-  var workedTime = 35760;
+  var workedTime = "35760";
   
   
   
@@ -1047,7 +1047,7 @@ function startTicker() {
     var currentTime = new Date();
     var duration = calculateDuration(startDate, currentTime);
     //tickerElement.textContent = formatDuration(duration)
-      tickerElement.textContext = workedTime + formatDuration(duration) ;
+      tickerElement.textContext = workedTime + duration ;
   }, 1000); // Update every second
 }
 
