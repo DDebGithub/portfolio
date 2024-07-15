@@ -1113,23 +1113,25 @@ startTicker();
         window.addEventListener('DOMContentLoaded', (event) => {
           // Get the start date
           var startDate = new Date();
-          var prev_work_hrs = 2072
-          startDate.setFullYear(startDate.getFullYear() - 4); // Subtract 4 previous years of XP
-          startDate.setMonth(startDate.getMonth() - 1); // Subtract 1 previous months of XP
+          var prev_work_hrs = 35770;
+          startDate.setFullYear(startDate.getFullYear() - 6); // Subtract 4 previous years of XP
+          startDate.setMonth(startDate.getMonth() - 5); // Subtract 1 previous months of XP
     
           // Get the HTML element to display the timer
-            var timerElement = document.getElementById('hoursWorked');
+          var timerElement = document.getElementById('hoursWorked');
     
           // Update the timer every second
           setInterval(function() {
             var currentDate = new Date();
-            var timeDiff = currentDate.getTime() - startDate.getTime();
+            var timeDiff = currentDate - startDate;
             var totalHours = Math.floor(timeDiff / (1000 * 60 * 60));
-            var total_time = prev_work_hrs + totalHours;
+            // var total_time = prev_work_hrs + totalHours;
             
             // Display the total hours with ' as numeral separator
-            var formattedHours = total_time.toLocaleString('en-US');
-            var formattedTimer = formattedHours.replace(/,/g, ",");
+            // 6 years, 5 months, and 4 days
+            
+        var formattedHours = totalHours.toLocaleString('en-US');
+        var formattedTimer = formattedHours.replace(/,/g, ",");
 
             // Update the timer element with the formatted total hours
             timerElement.textContent = formattedTimer;
