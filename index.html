@@ -1125,13 +1125,14 @@ startTicker();
             var currentDate = new Date();
             var timeDiff = currentDate.getTime() - startDate.getTime();
             var totalHours = Math.floor(timeDiff / (1000 * 60 * 60));
-    
+            var total_time = prev_work_hrs + totalHours;
+            
             // Display the total hours with ' as numeral separator
-        var formattedHours = totalHours.toLocaleString('en-US');
-        var formattedTimer = formattedHours.replace(/,/g, ",");
+            var formattedHours = total_time.toLocaleString('en-US');
+            var formattedTimer = formattedHours.replace(/,/g, ",");
 
-        // Update the timer element with the formatted total hours
-        timerElement.textContent = prev_work_hrs + totalHours;
+            // Update the timer element with the formatted total hours
+            timerElement.textContent = formattedTimer;
         // console.log(totalHours + prev_work_hrs);
       }, 1000); // Update every second
         });
