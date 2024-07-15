@@ -1039,12 +1039,15 @@
 function startTicker() {
   var tickerElement = document.getElementById("timer");
   var startDate = new Date("March 15, 2022 00:00:00");
+  var workedTime = 35760;
+  
   
   
   setInterval(function() {
     var currentTime = new Date();
     var duration = calculateDuration(startDate, currentTime);
-    tickerElement.textContent = formatDuration(duration);
+    //tickerElement.textContent = formatDuration(duration)
+      tickerElement.textContext = workedTime + formatDuration(duration) ;
   }, 1000); // Update every second
 }
 
@@ -1135,6 +1138,26 @@ startTicker();
       }, 1000); // Update every second
         });
       </script>
+  <script>
+     window.addEventListener('DOMContentLoaded', (event) => {
+       // Initial worked time in hours
+        var workedTime = 35760;
+
+        // Function to calculate total worked time
+        function getTotalWorkedTime(currentWorkedTime) {
+            var totalWorkedTime = workedTime + currentWorkedTime;
+            return totalWorkedTime;
+        }
+       // Example: current worked time
+        var currentWorkedTime = ; // Values of work time of current company
+       // Calculate total worked time
+        var totalWorkedTime = getTotalWorkedTime(currentWorkedTime);
+       // Display total worked time in HTML
+        timerElement.textContent = totalWorkedTime;
+       
+     }
+    
+  </script>
  
     <!-- Test Script -->
     
