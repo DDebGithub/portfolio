@@ -1038,12 +1038,7 @@
     <script>
 function startTicker() {
   var tickerElement = document.getElementById("timer");
-   var workTicker = document.getElementById("hoursWorked");
   var startDate = new Date("March 15, 2022 00:00:00");
-  var workedTime = "35760";
-  
-  
-  
   setInterval(function() {
     var currentTime = new Date();
     var duration = calculateDuration(startDate, currentTime);
@@ -1113,13 +1108,14 @@ startTicker();
 
   </script>
   
-    <!-- Working Hours Clocked Script 
+    <!-- Working Hours Clocked Script -->
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
           // Get the start date
           var startDate = new Date();
-          startDate.setFullYear(startDate.getFullYear() - 4); // Subtract 4 years
-          startDate.setMonth(startDate.getMonth() - 9); // Subtract 9 months
+          var prev_work_hrs = "20472"
+          startDate.setFullYear(startDate.getFullYear() - 2); // Subtract 2 previous years of XP
+          startDate.setMonth(startDate.getMonth() - 4); // Subtract 4 previous months of XP
     
           // Get the HTML element to display the timer
           var timerElement = document.getElementById('hoursWorked');
@@ -1135,11 +1131,11 @@ startTicker();
         var formattedTimer = formattedHours.replace(/,/g, ",");
 
         // Update the timer element with the formatted total hours
-        timerElement.textContent = formattedTimer;
+        timerElement.textContent = prev_work_hrs + formattedTimer;
       }, 1000); // Update every second
         });
       </script>
-</script>-->
+</script>
  
     <!-- Test Script -->
     
