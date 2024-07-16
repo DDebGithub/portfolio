@@ -410,7 +410,7 @@
               <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
             </div>
             <div class="counter-num">
-              <p class="counter">5</p>
+              <p class="counter" id="yearsWorked">5</p>
               <span class="counter-text">YEARS OF EXPERIENCE</span>
             </div>
           </div>
@@ -1114,27 +1114,28 @@ startTicker();
           // Get the start date
           var startDate = new Date();
           var prev_work_hrs = 35770;
+          // Conversion constants for calculating XP year
+            const hoursPerDay = 24;
+            const daysPerYear = 365.25; // Taking into account leap years
+            const daysPerMonth = 30.44; // Average month length
           startDate.setFullYear(startDate.getFullYear() - 6); // Subtract 4 previous years of XP
           startDate.setMonth(startDate.getMonth() - 5); // Subtract 1 previous months of XP
-    
           // Get the HTML element to display the timer
           var timerElement = document.getElementById('hoursWorked');
-    
+          var yearElement = document.getElementById("yearsWorked");
           // Update the timer every second
           setInterval(function() {
             var currentDate = new Date();
             var timeDiff = currentDate - startDate;
             var totalHours = Math.floor(timeDiff / (1000 * 60 * 60));
-            // var total_time = prev_work_hrs + totalHours;
-            
-            // Display the total hours with ' as numeral separator
-            // 6 years, 5 months, and 4 days
-            
-        var formattedHours = totalHours.toLocaleString('en-US');
-        var formattedTimer = formattedHours.replace(/,/g, ",");
+            var formattedHours = totalHours.toLocaleString('en-US');
+            var formattedTimer = formattedHours.replace(/,/g, ",");
+            var totalDays = totalHours / hoursPerDay;
+            var years = Math.floor(totalDays / daysPerYear);
 
             // Update the timer element with the formatted total hours
             timerElement.textContent = formattedTimer;
+            yearElement.textContent = years;
         // console.log(totalHours + prev_work_hrs);
       }, 1000); // Update every second
         });
