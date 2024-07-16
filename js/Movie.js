@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function openModal(comicId) {
-      var modal = document.getElementById("modal");
-      var comicTitle = document.getElementById("comic-title-modal");
-      var comicReview = document.getElementById("comic-review-modal");
+      var modal = document.getElementById("modal_test");
+      // var comicTitle = document.getElementById("comic-title-modal");
+      // var comicReview = document.getElementById("comic-review-modal");
 
       // Set the modal content based on the comicId
       if (comicId === "prisoners") {
