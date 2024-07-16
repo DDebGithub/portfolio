@@ -23,7 +23,7 @@ function openModal(comicId) {
       var comicTitle = document.getElementById("comic-title-modal");
       var comicReview = document.getElementById("comic-review-modal");
 
-      Set the modal content based on the comicId
+      // Set the modal content based on the comicId
       if (comicId === "prisoners") {
         comicTitle.textContent = "Prisoners";
         comicReview.innerHTML = "Prisoners is a haunting and intense thriller that stands out for its exceptional performances, masterful direction, and gripping narrative. The way this film kept me at the edge of my seat, and challenged me to reflect on the darker aspects of human nature left a lasting impression on me. An eye-opener, this is a must-watch!!";
