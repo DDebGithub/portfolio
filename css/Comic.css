@@ -364,18 +364,20 @@ select {
   padding: 5px;
 }
 
-/* Style for the circular button with a plus sign */
+/* Style for Card Black Overlay */
 
-.add-section-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #007BFF; /* Change the background color as desired */
-    color: #fff; /* Text color */
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    outline: none;
+.add-actions {
+    background: #000 none repeat scroll 0 0;
+    bottom: 30px;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 10px 15px;
+    position: absolute;
+    transition: all 0.4s ease 0s;
+    width: 100%;
 }
 
 /*--------------------------------------------------------------
