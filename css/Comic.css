@@ -227,12 +227,12 @@ h1 {
     #modal-content {
       background-color: #fff;
       width: 80%;
-      max-width: 600px;
+      max-width: 710px;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: absolute;
-      top: 54%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
