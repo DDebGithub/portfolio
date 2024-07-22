@@ -1111,34 +1111,62 @@ startTicker();
     <!-- Working Hours Clocked Script -->
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-          // Get the start date
-          var startDate = new Date();
-          // var prev_work_hrs = 35770;
-          // Conversion constants for calculating XP year
-            const hoursPerDay = 24;
-            const daysPerYear = 365.25; // Taking into account leap years
-            const daysPerMonth = 30.44; // Average month length
-          startDate.setFullYear(startDate.getFullYear() - 6); // Subtract 4 previous years of XP
-          startDate.setMonth(startDate.getMonth() - 5); // Subtract 1 previous months of XP
-          // Get the HTML element to display the timer
-          var timerElement = document.getElementById('hoursWorked');
-          var yearElement = document.getElementById("yearsWorked");
-          // Update the timer every second
-          setInterval(function() {
-            var currentDate = new Date();
-            var timeDiff = currentDate - startDate;
-            var totalHours = Math.floor(timeDiff / (1000 * 60 * 60));
-            var formattedHours = totalHours.toLocaleString('en-US');
-            var formattedTimer = formattedHours.replace(/,/g, ",");
-            var totalDays = totalHours / hoursPerDay;
-            var years = Math.floor(totalDays / daysPerYear);
+    // Constants for calculations
+    const hoursPerDay = 24;
+    const daysPerYear = 365.25; // Taking into account leap years
+    const daysPerMonth = 30.44; // Average month length
 
-            // Update the timer element with the formatted total hours
-            timerElement.textContent = formattedTimer;
-            yearElement.textContent = years;
-        // console.log(totalHours + prev_work_hrs);
-      }, 100); // Update every 10 seconds
-        });
+    // Get the current time
+    const currentTime = new Date();
+
+    // Initial work start date
+    let startDate = new Date();
+    startDate.setFullYear(startDate.getFullYear() - 6); // Subtract 6 years
+    startDate.setMonth(startDate.getMonth() - 5); // Subtract 5 months
+
+    // Get the total hours worked from localStorage or calculate it if not available
+    let totalHoursWorked = parseInt(localStorage.getItem('totalHoursWorked')) || 0;
+    let lastVisit = localStorage.getItem('lastVisit');
+    if (lastVisit) {
+        lastVisit = new Date(lastVisit);
+        // Calculate hours passed since last visit
+        const hoursSinceLastVisit = Math.floor((currentTime - lastVisit) / (1000 * 60 * 60));
+        totalHoursWorked += hoursSinceLastVisit;
+    }
+
+    // Store the current visit time in localStorage
+    localStorage.setItem('lastVisit', currentTime);
+
+    // Get the HTML elements to display the timer
+    const timerElement = document.getElementById('hoursWorked');
+    const yearElement = document.getElementById('yearsWorked');
+
+    function updateWorkHours() {
+        // Calculate total days and years worked
+        const totalDays = totalHoursWorked / hoursPerDay;
+        const years = Math.floor(totalDays / daysPerYear);
+
+        // Format the total hours with commas
+        const formattedHours = totalHoursWorked.toLocaleString('en-US');
+
+        // Update the timer element with the formatted total hours and years
+        timerElement.textContent = formattedHours;
+        yearElement.textContent = years;
+
+        // Store the updated total hours in localStorage
+        localStorage.setItem('totalHoursWorked', totalHoursWorked);
+    }
+
+    // Initial update
+    updateWorkHours();
+
+    // Update the total hours worked every hour
+    setInterval(() => {
+        totalHoursWorked++;
+        updateWorkHours();
+    }, 3600000); // 3600000 milliseconds = 1 hour
+});
+
       </script>
 </script>
  
