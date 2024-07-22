@@ -1124,9 +1124,11 @@ startTicker();
     startDate.setFullYear(startDate.getFullYear() - 6); // Subtract 6 years
     startDate.setMonth(startDate.getMonth() - 5); // Subtract 5 months
 
-    // Get the total hours worked from localStorage or calculate it if not available
-    let totalHoursWorked = parseInt(localStorage.getItem('totalHoursWorked')) || 0;
+    // Initialize total hours worked with the initial value or retrieve from localStorage
+    let initialHoursWorked = 56208;
+    let totalHoursWorked = parseInt(localStorage.getItem('totalHoursWorked')) || initialHoursWorked;
     let lastVisit = localStorage.getItem('lastVisit');
+
     if (lastVisit) {
         lastVisit = new Date(lastVisit);
         // Calculate hours passed since last visit
