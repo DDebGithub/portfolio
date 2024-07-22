@@ -186,7 +186,11 @@ h1 {
       width: 100%;
       height: 464px;
       object-fit: cover;
-      transition: transform 0.3s;
+    }
+    .comic-card img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    /*background-color: blue;  Change background color to blue */
+    border-radius: 5px; /* Adding border-radius for smoother effect */
     }
 
     .comic-card-content {
