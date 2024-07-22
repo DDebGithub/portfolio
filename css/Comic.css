@@ -182,7 +182,7 @@ h1 {
     }
     .comic-card :hover {
         transform: scale(1.05); /* Slightly enlarge the div */
-        background-color: blue; /* Change background color to blue */
+        /* background-color: blue; /* Change background color to blue */
         /*color: white;  Change text color to white for better contrast */
     }
 
