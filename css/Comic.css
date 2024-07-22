@@ -180,6 +180,11 @@ h1 {
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    .comic-card :hover {
+        transform: scale(1.05); /* Slightly enlarge the div */
+        background-color: blue; /* Change background color to blue */
+        /*color: white;  Change text color to white for better contrast */
+    }
 
     .comic-card img {
       width: 100%;
