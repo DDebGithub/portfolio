@@ -1,6 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 const uri = process.env.MONGODB_URI; // MongoDB connection string
+// const uri = mongodb+srv://Hotsquid:Hotsquid@2256@portfoliocluster.8gorkqg.mongodb.net/
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 exports.handler = async function(event, context) {
