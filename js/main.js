@@ -248,3 +248,38 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 3600000); // 3600000 milliseconds = 1 hour
 });
 // Working Hours Clocked Script End
+
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+    };
+
+    try {
+        const response = await fetch('https://api.github.com/repos/DDebGithub/portfolio/dispatches', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'token YOUR_GITHUB_PERSONAL_ACCESS_TOKEN',
+                'Accept': 'application/vnd.github.v3+json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                event_type: 'form_submission',
+                client_payload: formData,
+            }),
+        });
+
+        if (response.ok) {
+            alert('Form submitted successfully!');
+        } else {
+            const result = await response.json();
+            alert('Error: ' + result.message);
+        }
+    } catch (error) {
+        alert('Error: ' + error.message);
+    }
+});
