@@ -273,13 +273,15 @@ document.getElementById('contact-form').addEventListener('submit', async functio
             }),
         });
 
-        if (response.ok) {
+       if (response.ok) {
             alert('Form submitted successfully!');
         } else {
             const result = await response.json();
+            console.log('Error:', result);
             alert('Error: ' + result.message);
         }
     } catch (error) {
+        console.log('Catch Error:', error);
         alert('Error: ' + error.message);
     }
 });
