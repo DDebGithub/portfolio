@@ -266,7 +266,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
             method: 'POST',
             headers: {
                 'Authorization': 'token CONTACT_FORM_TOKEN',
-                'Accept': 'application/vnd.github.v3+json',
+                'Accept': 'application/vnd.github.+json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
