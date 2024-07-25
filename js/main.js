@@ -249,6 +249,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 // Working Hours Clocked Script End
 
+// Contact Form Github Request Starts
+
 document.getElementById('contact-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
@@ -285,3 +287,4 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         alert('Error: ' + error.message);
     }
 });
+// Contact Form Github Request Ends
