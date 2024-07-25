@@ -13,11 +13,11 @@ jobs:
 
     - name: Write form data to file
       run: |
-        echo "Name: ${{ github.event.client_payload.name }}" >> submissions.txt
-        echo "Email: ${{ github.event.client_payload.email }}" >> submissions.txt
-        echo "Subject: ${{ github.event.client_payload.subject }}" >> submissions.txt
-        echo "Message: ${{ github.event.client_payload.message }}" >> submissions.txt
-        echo "" >> submissions.txt
+        echo "Name: ${{ github.event.client_payload.name }}" >> contact-form.txt
+        echo "Email: ${{ github.event.client_payload.email }}" >> contact-form.txt
+        echo "Subject: ${{ github.event.client_payload.subject }}" >> contact-form.txt
+        echo "Message: ${{ github.event.client_payload.message }}" >> contact-form.txt
+        echo "" >> contact-form.txt
 
     - name: Commit and push changes
       run: |
@@ -27,4 +27,4 @@ jobs:
         git commit -m "Add new form submission"
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.CONTACT_FORM_TOKEN }}
