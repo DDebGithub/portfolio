@@ -263,7 +263,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         const response = await fetch('https://api.github.com/repos/DDebGithub/portfolio/dispatches', {
             method: 'POST',
             headers: {
-                'Authorization': 'token YOUR_GITHUB_PERSONAL_ACCESS_TOKEN',
+                'Authorization': 'token CONTACT_FORM_TOKEN',
                 'Accept': 'application/vnd.github.v3+json',
                 'Content-Type': 'application/json',
             },
