@@ -410,6 +410,7 @@ select {
     border: 1px solid #ccc;
     padding: 10px;
     resize: none;
+    border-color: #1576e4;
 }
 
 .submit-button {
@@ -434,7 +435,6 @@ select {
 
     .responsive-image, .responsive-textarea {
         width: 100%;
-        height: auto;
     }
 }
 
