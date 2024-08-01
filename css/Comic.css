@@ -426,7 +426,7 @@ select {
     border-color: #1576e4;
 }
 
-.submit-button {
+/* .submit-button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -439,7 +439,7 @@ select {
 
 .submit-button:hover {
     background-color: #0056b3;
-}
+} */
 
 @media (max-width: 600px) {
     .overlay-wrapper {
