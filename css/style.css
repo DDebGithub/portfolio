@@ -135,6 +135,10 @@ a:hover {
 
 /*--/ Title s /--*/
 
+.title{
+  visibility: hidden;
+}
+
 .title-s {
   font-weight: 600;
   color: #1e1e1e;
@@ -914,7 +918,7 @@ a:hover {
 .card-blog .post-date {
   color: #4e4e4e;
   display: inline-block;
-  float: right;
+  /*float: right;*/
 }
 
 /*======================================
@@ -1467,10 +1471,12 @@ footer .credits a {
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
   list-style: none;
-  text-align: center;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
 .portfolio .portfolio-filters li {
@@ -1483,12 +1489,33 @@ footer .credits a {
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 10px;
-  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
+.portfolio .portfolio-filters,
+.portfolio {
   color: var(--accent-color);
+}
+
+.portfolio-filters .filter-btn.active{
+  color: #0078ff; /* Optional: Change text color */
+  font-weight: bold;
+}
+
+.filter-btn:hover{
+  color: #007BFF;
+}
+
+.portfolio-filters .filter-btn.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the position of the underline */
+  width: 100%;
+  height: 3px; /* Thickness of the underline */
+  background-color: #0078ff;
+  transition: width 0.3s ease;
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -1574,4 +1601,221 @@ footer .credits a {
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
+}
+
+
+
+/* TILE OVERLAY CSS */
+.row-blog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+  max-height: 1000px;
+  width: 100%;
+  justify-content: center;
+  overflow-y: auto; /* Keeps scrolling enabled */
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+  position: relative;
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.row-blog::-webkit-scrollbar {
+  display: none;
+}
+
+.column {
+  flex: 1 1 25%; /* 18% width for 5 columns with spacing */
+  background-color: lightgray;
+  padding: 20px;
+  text-align: center;
+}
+
+.tile {
+  flex: 1 1 calc(25% - 10px);
+  width: 254px; 
+  height: 367px;
+  overflow: visible; /* Allow content to expand */
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative; /* Ensures stacking works */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: scale(1.1); /* Enlarges tile */
+  z-index: 100; /* Ensures tile is above others */
+  box-shadow: 0px 5px 15px rgba(12, 0, 0, 0.8);
+}
+
+.row-blog > * {
+  overflow: visible !important;
+}
+
+/*.container {
+  overflow: hidden;  Prevents unexpected scroll issues 
+  position: relative;
+}*/
+
+.rating {
+  position: absolute;
+  bottom: -20px; /* Initially hidden below the tile */
+  left: 50%;
+  transform: translateX(-50%); /* Centers horizontally */
+  font-size: 1.2rem;
+  color: gold;
+  opacity: 0;
+  transition: bottom 0.3s ease-out, opacity 0.3s ease-in-out;
+  text-align: center;
+  white-space: nowrap; /* Prevents wrapping */
+  
+  /* Enhancing visibility on light & dark backgrounds */
+  text-shadow: 
+      -2px -2px 4px black,  
+       2px -2px 4px black,  
+      -2px  2px 4px black,  
+       2px  2px 4px black,
+       0px  0px 6px black; /* Adds a glow effect */
+}
+
+.tile:hover .rating {
+  bottom: 10px; /* Moves up into view */
+  opacity: 1;
+}
+
+.tile:hover .overlay {
+  opacity: 1;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.overlay-cata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.overlay-cata-content {
+  max-height: 150px; /* Limit the height */
+  overflow-y: auto;  /* Enable scrolling */
+}
+
+.tile:hover .overlay-cata {
+  opacity: 1;
+}
+
+.plus {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.overlay-cata p {
+  font-size: 14px;
+  text-align: center;
+  max-width: 80%;
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+.read-more {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* Modal Overlay */
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+  display: none;
+  z-index: 999;
+  
+}
+
+/* Modal Container */
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 600px;
+  background: #000000bd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  display: none;
+  text-align: center;
+}
+
+/* Modal Header - Title */
+#modal-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Modal Content - Description */
+#modal-content {
+  padding: 20px;
+  font-size: 16px;
+  color: #ffffff !important;
+  text-align: justify;
+  line-height: 1.5;
+  max-height: 400px;
+  overflow-y: auto; /* Enables scrolling for long text */
+}
+
+#comic-title-modal{
+color: #ffffff;
+}
+
+/* Close Button */
+#close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Close Button Hover */
+#close-modal-button:hover {
+  color: red;
 }

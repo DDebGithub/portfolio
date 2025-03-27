@@ -1,5 +1,6 @@
 (function ($) {
 	"use strict";
+  //console.log("JavaScript Loaded!"); // Debugging check
 	var nav = $('nav');
   var navHeight = nav.outerHeight();
   
@@ -185,6 +186,7 @@ function formatDuration(duration) {
 
 // Start the ticker
 startTicker();
+
 // Current Working Hours Counter Script End
 
 
@@ -249,42 +251,104 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 // Working Hours Clocked Script End
 
-// Contact Form Github Request Starts
+// Blog tiles start
 
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  //console.log("This works")
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const tiles = document.querySelectorAll(".tile");
 
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value,
-    };
+  filterButtons.forEach(button => {
+      button.addEventListener("click", function () {
+          const filter = this.getAttribute("data-filter");
+          console.log("Filtering by:", filter);
 
-    try {
-        const response = await fetch('https://api.github.com/repos/DDebGithub/portfolio/dispatches', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'token CONTACT_FORM_TOKEN',
-                'Accept': 'application/vnd.github.+json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                event_type: 'form_submission',
-                client_payload: formData,
-            }),
-        });
-
-       if (response.ok) {
-            alert('Form submitted successfully!');
-        } else {
-            const result = await response.json();
-            console.log('Error:', result);
-            alert('Error: ' + result.message);
-        }
-    } catch (error) {
-        console.log('Catch Error:', error);
-        alert('Error: ' + error.message);
-    }
+          tiles.forEach(tile => {
+              const category = tile.getAttribute("data-category");
+              if (filter === "all" || category === filter) {
+                  tile.style.display = "block"; // Show matching tiles
+              } else {
+                  tile.style.display = "none"; // Hide non-matching tiles
+              }
+          });
+      });
+  });
 });
-// Contact Form Github Request Ends
+
+// Read More Functionality
+
+document.addEventListener("DOMContentLoaded", function () {
+  //console.log("✅ DOM fully loaded!");
+
+  const modal = document.getElementById("modal");
+  const overlay = document.getElementById("modal-overlay");
+  const closeModalButton = document.getElementById("close-modal-button");
+
+  if (!modal || !overlay) {
+      console.error("❌ Modal elements not found in the DOM!");
+      return;
+  }
+
+  console.log("✅ Modal and Overlay found in the DOM!");
+
+  // Open Modal Function
+  function openModal(title, review) {
+      console.log("✅ Opening modal with:", title, review);
+      document.getElementById("comic-title-modal").textContent = title;
+      document.getElementById("comic-review-modal").textContent = review;
+
+      modal.style.display = "flex"; // Show modal
+      modal.style.display = "flex";
+      modal.style.flexDirection = "column";
+      modal.style.alignItems = "center";
+      overlay.style.display = "block"; // Show overlay
+  }
+
+  // Close Modal Function
+  function closeModal() {
+      //console.log("❌ Closing modal");
+      modal.style.display = "none";
+      overlay.style.display = "none";
+  }
+
+  // ✅ Ensure functions are globally available
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+
+  // ✅ Ensure Close Button Works
+  closeModalButton.addEventListener("click", closeModal);
+
+  // ✅ Close Modal When Clicking Outside the Content
+  overlay.addEventListener("click", function (event) {
+      if (event.target === overlay) {
+          //console.log("❌ Clicked outside modal, closing...");
+          closeModal();
+      }
+  });
+
+  // ✅ Dynamically Attach Click Listeners to Tiles
+  function attachTileEventListeners() {
+      document.querySelectorAll(".tile").forEach(tile => {
+          tile.addEventListener("click", function () {
+              //console.log("✅ Tile Clicked:", this);
+              const title = this.getAttribute("data-title") || "No Title";
+              const review = this.getAttribute("data-review") || "No Review";
+              openModal(title, review);
+          });
+      });
+      console.log("✅ Tile event listeners attached!");
+  }
+
+  attachTileEventListeners(); // Run once on page load
+
+  // If new tiles are dynamically added, call `attachTileEventListeners()` again
+});
+
+document.querySelectorAll(".filter-btn").forEach(button => {
+  button.addEventListener("click", function() {
+      document.querySelector(".filter-btn.active")?.classList.remove("active");
+      this.classList.add("active");
+  });
+});
+
+// Blog tiles end
