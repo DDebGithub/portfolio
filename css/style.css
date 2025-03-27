@@ -699,10 +699,20 @@ a:hover {
   height: .7rem;
 }
 
+.skill-mf .progress {
+  height: 0.7rem;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px; /* Spacing between progress bars */
+}
+
 .skill-mf .progress .progress-bar {
-  height: .7rem;
+  height: 100%;
+  width: 0; /* Start from 0 */
   background-color: #0078ff;
 }
+
 
 /*======================================
 //--//-->   SERVICES
@@ -822,6 +832,40 @@ a:hover {
 
 .w-title {
   font-size: 1.2rem;
+}
+
+.blinking-light-current {
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  box-shadow: 0 0 10px green;
+  animation: blink 1s infinite alternate;
+}
+
+.blinking-light-prev {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(128, 0, 0);
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  box-shadow: 0 0 10px rgb(128, 4, 0);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 10px green;
+  }
+  100% {
+    opacity: 0.3;
+    box-shadow: 0 0 2px green;
+  }
 }
 
 /*======================================

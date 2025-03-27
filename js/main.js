@@ -343,7 +343,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // If new tiles are dynamically added, call `attachTileEventListeners()` again
 });
-
 document.querySelectorAll(".filter-btn").forEach(button => {
   button.addEventListener("click", function() {
       document.querySelector(".filter-btn.active")?.classList.remove("active");
@@ -351,4 +350,19 @@ document.querySelectorAll(".filter-btn").forEach(button => {
   });
 });
 
-// Blog tiles end
+
+// Animate the skill bars
+document.addEventListener("DOMContentLoaded", function () {
+  let progressBars = document.querySelectorAll(".progress-bar");
+
+  progressBars.forEach((bar) => {
+      let maxWidth = bar.style.width; // Get the initial width set in CSS
+      bar.style.width = "0%"; // Start from 0%
+
+      setTimeout(() => {
+          bar.style.transition = "width 2s ease-in-out";
+          bar.style.width = maxWidth; // Animate to the target width
+      }, 500); // Small delay before animation starts
+  });
+});
+
