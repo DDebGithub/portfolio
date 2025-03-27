@@ -709,7 +709,9 @@ a:hover {
 
 .skill-mf .progress .progress-bar {
   height: 100%;
-  width: 0; /* Start from 0 */
+  width: 0%; /* Start from 0 */
+  width: 0%; /* Start from 0% width */
+  transition: width 2s ease-in-out; /* Smooth animation */
   background-color: #0078ff;
 }
 
@@ -834,6 +836,21 @@ a:hover {
   font-size: 1.2rem;
 }
 
+.card-img{
+  width: 100%; /* Ensures it takes full width */
+  height: 200px; /* Set a fixed height for consistency */
+  overflow: hidden; /* Prevents overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-fluid{
+  width: auto; /* Allows natural width */
+  height: 100%; /* Forces all images to the same height */
+  object-fit: cover; /* Ensures images fill the container properly */
+}
+
 .blinking-light-current {
   width: 12px;
   height: 12px;
@@ -916,6 +933,14 @@ a:hover {
 
 .card-blog .card-body {
   position: relative;
+  
+}
+
+.card{
+  border-radius: 15px; /* Adjust this value for more or less rounding */
+  overflow: hidden; /* Ensures child elements respect the border radius */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  border: 1px solid #ddd; /* Optional: Adds a subtle border */
 }
 
 .card-blog .card-category-box {
@@ -1663,6 +1688,7 @@ footer .credits a {
   position: relative;
   justify-content: center;
   padding-left: 7%;
+  padding-top: 18px;
 }
 
 .container-blog {

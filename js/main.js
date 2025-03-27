@@ -356,13 +356,27 @@ document.addEventListener("DOMContentLoaded", function () {
   let progressBars = document.querySelectorAll(".progress-bar");
 
   progressBars.forEach((bar) => {
-      let maxWidth = bar.style.width; // Get the initial width set in CSS
-      bar.style.width = "0%"; // Start from 0%
-
-      setTimeout(() => {
-          bar.style.transition = "width 2s ease-in-out";
-          bar.style.width = maxWidth; // Animate to the target width
-      }, 500); // Small delay before animation starts
+      let maxWidth = bar.style.width || bar.getAttribute("data-width"); // Get width from style or data-width
+      bar.setAttribute("data-width", maxWidth); // Store it in data-width
+      bar.style.width = "0%"; // Set to 0% for animation
   });
+
+  let observer = new IntersectionObserver(
+      (entries, observer) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  let bar = entry.target;
+                  let maxWidth = bar.getAttribute("data-width"); // Retrieve stored width
+                  bar.style.width = maxWidth; // Animate to actual width
+                  observer.unobserve(bar); // Stop observing once animated
+              }
+          });
+      },
+      { threshold: 0.3 } // Trigger when 30% of the bar is visible
+  );
+
+  progressBars.forEach((bar) => observer.observe(bar));
 });
+
+
 
