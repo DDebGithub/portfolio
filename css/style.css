@@ -1652,16 +1652,22 @@ footer .credits a {
 /* TILE OVERLAY CSS */
 .row-blog {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   row-gap: 10px;
   column-gap: 10px;
   max-height: 1000px;
-  width: 100%;
-  justify-content: center;
-  overflow-y: auto; /* Keeps scrolling enabled */
-  scrollbar-width: none; /* Hides scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+  width: 95%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   position: relative;
+  justify-content: center;
+  padding-left: 7%;
+}
+
+.container-blog {
+  padding: 0;
+  margin: 0;
 }
 
 /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
@@ -1670,14 +1676,14 @@ footer .credits a {
 }
 
 .column {
-  flex: 1 1 25%; /* 18% width for 5 columns with spacing */
+  flex: 1 1 16%; /* 18% width for 6 columns with spacing */
   background-color: lightgray;
   padding: 20px;
   text-align: center;
 }
 
 .tile {
-  flex: 1 1 calc(25% - 10px);
+  flex: 1 1 calc(16% - 10px);
   width: 254px; 
   height: 367px;
   overflow: visible; /* Allow content to expand */
