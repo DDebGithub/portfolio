@@ -177,7 +177,7 @@
     <!--/ Resume Section Start /-->
     <section id="resume" class="resume section-bg">
       <div class="container">
-        <div class="box-shadow-full">
+        <div class="box-shadow-full resume-content">
             
         <div class="container">
             <div class="row justify-content-between">
@@ -187,12 +187,10 @@
                   <h2 class="title-left">Resume</h2>
                 </div>
               </div>
-        
-              <!-- PDF download button -->
-              <div class="col-auto">
-                <a href="https://raw.githubusercontent.com/DDebGithub/portfolio/main/Deb's%20Resume.pdf" download class="btn btn-primary">
-                  <i class="fas fa-file-pdf"></i> Download PDF
-                </a>
+
+              <div class="fade-overlay"></div>
+              <div class="resume-download">
+                <a href="https://raw.githubusercontent.com/DDebGithub/portfolio/main/Deb's%20Resume.pdf" download class="btn btn-primary">Download</a>
               </div>
             </div>
         </div>
@@ -564,7 +562,7 @@
           <div class="card card-blog">
             <div class="blinking-light-prev"></div>
             <div class="card-img">
-              <a  ><img src="img/school-2.jpg" alt="" class="img-fluid"></a>
+              <a  ><img src="img/work/school-2.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -587,7 +585,7 @@
           <div class="card card-blog">
             <div class="blinking-light-prev"></div>
             <div class="card-img">
-              <a  ><img src="img/school-1.jpg" alt="" class="img-fluid"></a>
+              <a  ><img src="img/work/school-1.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -621,7 +619,7 @@
           <div class="card card-blog">
             <div class="blinking-light-prev"></div>
             <div class="card-img">
-              <a  ><img src="img/school-1.jpg" alt="" class="img-fluid"></a>
+              <a  ><img src="img/work/school-1.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -655,7 +653,7 @@
           <div class="card card-blog">
             <div class="blinking-light-prev"></div>
             <div class="card-img">
-              <a  ><img src="img/work-5.jpg" alt="" class="img-fluid"></a>
+              <a  ><img src="img/work/work-5.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -689,7 +687,7 @@
           <div class="card card-blog">
             <div class="blinking-light-prev"></div>
             <div class="card-img">
-              <a  ><img src="img/work-4.jpg" alt="" class="img-fluid"></a>
+              <a  ><img src="img/work/work-4.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -724,7 +722,7 @@
             <!-- Blinking Light -->
             <div class="blinking-light-prev"></div>
             <div class="card-img">
-              <a  ><img src="img/work-3.jpg" alt="" class="img-fluid"></a>
+              <a  ><img src="img/work/work-3.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -758,7 +756,7 @@
             <!-- Blinking Light -->
             <div class="blinking-light-prev"></div>
             <div class="card-img">
-              <a  ><img src="img/work-2.jpg" alt="" class="img-fluid"></a>
+              <a  ><img src="img/work/work-2.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -793,7 +791,7 @@
             <!-- Blinking Light -->
             <div class="blinking-light-current" data-tooltip="Currently Active"></div>
             <div class="card-img">
-              <a><img src="img/work-1.jpg" alt="" class="img-fluid"></a>
+              <a><img src="img/work/work-1.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -940,15 +938,23 @@
             </div>
           </div>
 
-          <div class="tile" data-category="games" data-title="Street Fighter" data-description="A fighting game with challenging combat.">
-            <img src="img/blog-gaming.jpg" alt="Street Fighter">
+          <div class="tile" data-category="games" data-title="Ultra Street Fighter® IV" data-review="Fighting ★ Arcade ★ Competitive ★ 2D Fighter">
+            <img src="img/games/sf4.png" alt="Ultra Street Fighter® IV">
             <div class="overlay">
-                <h3 class="title">Street Fighter</h3>
-                <p class="short-description">A fighting game with...</p>
-                <button class="read-more">Read More</button>
+                <h3 class="title">Ultra Street Fighter® IV</h3>
+                <div class="rating">★★★★★</div>
+                      <!--<div class="rating">★★★★☆</div>-->
             </div>
         </div>
 
+          <div class="tile" data-category="games" data-title="Counter-Strike: Global Offensive" data-review="FPS ★ Shooter ★ Competitive ★ Multiplayer ★ Action">
+                      <img src="img/games/cs-go.png" alt="Counter-Strike: Global Offensive">
+                      <div class="overlay">
+                          <h3 class="title">Counter-Strike: Global Offensive</h3>
+                          <div class="rating">★★★★★</div>
+                                <!--<div class="rating">★★★★☆</div>-->
+                      </div>
+                  </div>
         <div class="tile" data-category="movies" data-title="Pulp Fiction" data-review="The Social Network, based on the book The Accidental Billionaires: Sex, Money Betrayal and the Founding of Facebook, is the story of the formation and development of the biggest social netwwork: Facebook.">
             <img src="img/movie/Pulp.heic" alt="Pulp Fiction">
             <div class="overlay">
@@ -956,6 +962,15 @@
                 <div class="rating">★★★★★</div>
                       <!--<div class="rating">★★★★☆</div>-->
             </div>
+        </div>
+
+        <div class="tile" data-category="games" data-title="God of War II" data-review="Fighting ★ Action ★ Single-player ★ Adventure ★ Story Rich">
+          <img src="img/games/gow2.png" alt="God of War II">
+          <div class="overlay">
+              <h3 class="title">God of War II</h3>
+              <div class="rating">★★★★★</div>
+                    <!--<div class="rating">★★★★☆</div>-->
+          </div>
         </div>
 
         <div class="tile" data-category="books" data-title="Astronomy: The Definitive Guide to the Universe" data-review="From our own planet to the very edge of the visible universe, this definitive guide explores the cosmos with lavish illustrations and imaginative presentation. Featuring stunning images from the Huygens-Cassini space probe of Titan, this book offers some of the finest photographs ever published. Informative, authoritative, and accessible, it provides a comprehensive and captivating look at the universe.">
@@ -976,7 +991,14 @@
                     </div>
                 </div>
 
-        
+        <div class="tile" data-category="games" data-title="Need for Speed: Most Wanted" data-review="Racing ★ Multiplayer ★ Open World ★ Driving">
+                    <img src="img/games/nfs-mw.png" alt="Need for Speed: Most Wanted">
+                    <div class="overlay">
+                        <h3 class="title">Need for Speed: Most Wanted</h3>
+                        <div class="rating">★★★★★</div>
+                              <!--<div class="rating">★★★★☆</div>-->
+                    </div>
+                </div>
 
         
 
@@ -995,6 +1017,15 @@
       <h3 class="title">Inside Llewyn Davis</h3>
       <div class="rating">★★★☆☆</div>
         <!--<div class="rating">★★★★☆</div>-->
+  </div>
+</div>
+
+<div class="tile" data-category="games" data-title="Need for Speed: Most Wanted" data-review="Racing ★ Multiplayer ★ Open World ★ Driving">
+  <img src="img/games/nfs-mw2.png" alt="Need for Speed: Most Wanted">
+  <div class="overlay">
+      <h3 class="title">Need for Speed: Most Wanted</h3>
+      <div class="rating">★★☆☆☆</div>
+            <!--<div class="rating">★★★★☆</div>-->
   </div>
 </div>
 
@@ -1018,6 +1049,17 @@
   </div>
 </div>
 
+<div class="tile" data-category="games" data-title="Assassin's Creed" data-review="Fighting ★ Action ★ Single-player ★ Adventure ★ Story Rich">
+  <img src="img/games/ac1.png" alt="Assassin's Creed">
+  <div class="overlay">
+      <h3 class="title">Assassin's Creed</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
+  </div>
+</div>
+
+
+
 <div class="tile" data-category="movies" data-title="The Dark Knight" data-review="The lives of the residents of Gotham City turned upside down by a series of murders occur without finding the culprit. The one behind all this dark conspiracy is Joker, who is the city’s gang hired to eliminate Batman.">
   <img src="img/movie/dark_knight.png" alt="The Dark Knight">
   <div class="overlay">
@@ -1036,6 +1078,15 @@
   </div>
 </div>
 
+<div class="tile" data-category="games" data-title="Assassin's Creed II" data-review="Fighting ★ Action ★ Single-player ★ Adventure ★ Story Rich">
+  <img src="img/games/ac2.png" alt="Assassin's Creed II">
+  <div class="overlay">
+      <h3 class="title">Assassin's Creed II</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
+  </div>
+</div>
+
 <div class="tile" data-category="movies" data-title="Our Little Sister" data-review="A story that revolves around three sisters who live in their grandmother's home and the arrival of their thirteen-year-old half sister.">
   <img src="img/movie/little_sister.png" alt="Our Little Sister">
   <div class="overlay">
@@ -1051,6 +1102,15 @@
       <h3 class="title">Chungking Express</h3>
       <div class="rating">★★☆☆☆</div>
         <!--<div class="rating">★★★★☆</div>-->
+  </div>
+</div>
+
+<div class="tile" data-category="games" data-title="Assassin's Creed III" data-review="Fighting ★ Action ★ Single-player ★ Adventure ★ Story Rich">
+  <img src="img/games/ac3.png" alt="Assassin's Creed III">
+  <div class="overlay">
+      <h3 class="title">Assassin's Creed III</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
   </div>
 </div>
 
@@ -1190,11 +1250,12 @@
   </div>
 </div>
 
-<div class="tile" data-category="movies" data-title="The Godfather Part II" data-review="The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate." data-rating="5">
-  <img src="img/comic/Batgirl_Y1.heic" alt="Batgirl - Year One">
+<div class="tile" data-category="games" data-title="Need for Speed: Hot Pursuit" data-review="Racing ★ Multiplayer ★ Open World ★ Driving">
+  <img src="img/games/nfs-hp.png" alt="Need for Speed: Hot Pursuit">
   <div class="overlay">
-      <h3 class="title">Batgirl - Year One</h3>
-      <div class="rating">★★☆☆☆</div>
+      <h3 class="title">Need for Speed: Hot Pursuit</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
   </div>
 </div>
 
@@ -1213,11 +1274,30 @@
       <div class="rating">★★☆☆☆</div>
   </div>
 </div>
+
+<div class="tile" data-category="games" data-title="Need for Speed: Hot Pursuit 2" data-review="Racing ★ Multiplayer ★ Open World ★ Driving">
+  <img src="img/games/nfs-hp2.png" alt="Need for Speed: Hot Pursuit 2">
+  <div class="overlay">
+      <h3 class="title">Need for Speed: Hot Pursuit 2</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
+  </div>
+</div>
+
 <div class="tile" data-category="movies" data-title="Silence" data-review="The movie follows two priests (Andrew Garfield and Adam Driver) as they travel to Japan in an attempt to locate their mentor and propagate Catholicism while Christianity was outlawed and their presence forbidden.">
   <img src="img/movie/Silence.heic" alt="Silence">
   <div class="overlay">
       <h3 class="title">Silence</h3>
       <div class="rating">★★★★★</div>
+  </div>
+</div>
+
+<div class="tile" data-category="games" data-title="DiRT Rally 2.0" data-review="Racing ★ Automobile Simulation ★ Multiplayer ★ Driving">
+  <img src="img/games/dirt-rally2.png" alt="DiRT Rally 2.0">
+  <div class="overlay">
+      <h3 class="title">DiRT Rally 2.0</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
   </div>
 </div>
 
@@ -1228,6 +1308,15 @@
     <div class="rating">★★★★★</div>
         <!--<div class="rating">★★★★☆</div>-->
 </div>
+</div>
+
+<div class="tile" data-category="games" data-title="The Witcher 3: Wild Hunt" data-review="Open World ★ RPG ★ Story Rich ★ Action">
+  <img src="img/games/witcher3.png" alt="The Witcher 3: Wild Hunt">
+  <div class="overlay">
+      <h3 class="title">The Witcher 3: Wild Hunt</h3>
+      <div class="rating">★★☆☆☆</div>
+            <!--<div class="rating">★★★★☆</div>-->
+  </div>
 </div>
 
 
@@ -1262,6 +1351,15 @@
   </div>
 </div>
 
+<div class="tile" data-category="games" data-title="Tekken 7" data-review="Fighting ★ Action ★ Multiplayer ★ Competitive">
+  <img src="img/games/t7.png" alt="Tekken 7">
+  <div class="overlay">
+      <h3 class="title">Tekken 7</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
+  </div>
+</div>
+
 <div class="tile" data-category="movies" data-title="Homefront" 
      data-review="A former DEA agent moves his family to a quiet town, where he soon tangles with a local meth druglord." 
      data-rating="2">
@@ -1282,6 +1380,15 @@
   </div>
 </div>
 
+<div class="tile" data-category="games" data-title="Tekken Tag Tournament 2" data-review="Fighting ★ Action ★ Multiplayer ★ Competitive">
+  <img src="img/games/tt2.png" alt="Tekken Tag Tournament 2">
+  <div class="overlay">
+      <h3 class="title">Tekken Tag Tournament 2</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
+  </div>
+</div>
+
 <div class="tile" data-category="comics" data-title="Batman - A Lonely Place Of Dying" 
      data-review="This storyline introduces Tim Drake, the third Robin, into the Batman mythos. Tim Drake, a young fan of Batman and Robin, deduces their secret identities after witnessing Batman's erratic behavior. Tim convinces Dick Grayson, the original Robin and now Nightwing, to return to Gotham to help Batman." 
      data-rating="4">
@@ -1289,6 +1396,15 @@
   <div class="overlay">
       <h3 class="title">Batman - A Lonely Place Of Dying</h3>
       <div class="rating">★★★★☆</div>
+  </div>
+</div>
+
+<div class="tile" data-category="games" data-title="God of War" data-review="Fighting ★ Action ★ Single-player ★ Adventure ★ Story Rich">
+  <img src="img/games/gow1.png" alt="God of War">
+  <div class="overlay">
+      <h3 class="title">God of War</h3>
+      <div class="rating">★★★★★</div>
+            <!--<div class="rating">★★★★☆</div>-->
   </div>
 </div>
 
@@ -1309,6 +1425,16 @@
   <div class="overlay">
       <h3 class="title">Batman: Knightfall</h3>
       <div class="rating">★★★★★</div>
+  </div>
+</div>
+
+<div class="tile" data-category="movies" data-title="Inside Out" 
+     data-review="After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school." 
+     data-rating="4">
+  <img src="img/movie/inside-out.png" alt="Inside Out">
+  <div class="overlay">
+      <h3 class="title">Inside Out</h3>
+      <div class="rating">★★★★☆</div>
   </div>
 </div>
 
@@ -1339,6 +1465,16 @@
   <div class="overlay">
       <h3 class="title">Green Lantern Corps: (2006)</h3>
       <div class="rating">★★★★☆</div>
+  </div>
+</div>
+
+<div class="tile" data-category="games" data-title="Counter-Strike" 
+     data-review="Action ★ FPS ★ Multiplayer Shooter ★ Classic" 
+     data-rating="5">
+  <img src="img/games/cs-16.png" alt="Counter-Strike">
+  <div class="overlay">
+      <h3 class="title">Counter-Strike</h3>
+      <div class="rating">★★★★</div>
   </div>
 </div>
 
